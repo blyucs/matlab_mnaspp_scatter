@@ -3,9 +3,6 @@ close all
 %二维散点图
 % 82 baseline
 % pkt_dir ='Y:\lvbo_dir\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200731T1320\' 
-pareto_para = []
-pareto_flops = []
-pareto_delay = []
 
 % 82 para-0.6
 % pkt_dir = 'Y:\lvbo_dir\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200731T1522\'
@@ -17,7 +14,7 @@ pareto_delay = []
 
 %82 flops =-0.6
 % pkt_dir = 'Y:\lvbo_dir\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200803T2355\'
-% pareto_flops = [416,551,599,579,928,46]
+% pareto_flops = [497,934,338,416,551,599,579,928,46]
 
 %19 flops add drop =-0.6
 % pkt_dir = 'X:\00_lvbo_dir\01_code\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200804T2242\'
@@ -25,16 +22,16 @@ pareto_delay = []
 
 %82 flops add drop =-0.3  (terninate by me , and continue to train from 549)
 % pkt_dir =  'Y:\lvbo_dir\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200805T1327\'
-% pareto_flops = [820,685,895,775,938,625]
+% pareto_flops = [,820,685,895,775,938,625]
 % pkt_dir =  'Y:\lvbo_dir\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200806T0718\'
 
 %19 delay =-0.6
-% pkt_dir = 'X:\00_lvbo_dir\01_code\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200803T1612\'
-% pareto_delay = [525,873,592,818,919,980,924,826]
+pkt_dir = 'X:\00_lvbo_dir\01_code\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200803T1612\'
+pareto_delay = [525,873,592,818,919,980,924,826]
 
 %19 delay=-0.3
 % pkt_dir = 'X:\00_lvbo_dir\01_code\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200807T2235\'
-% pareto_delay = [273,148,7,322,345,252,585,366,983]
+% pareto_delay = []
 
 %19 para  + flops + delay 
 
@@ -61,7 +58,7 @@ S = 60; %坐标点的大小/尺寸
 
 % scatte
 figure1 = figure('WindowState','maximized');
-createfigure(o_reward ,params, S, epoch, length(o_reward), figure1, 'Params(M)', [0,0.8], [0.2,1.2],pareto_para)
+createfigure(o_reward ,params, S, epoch, length(o_reward), figure1, 'Params', [0,0.8], [0.2,1.2],pareto_para)
 
 % pareto_data = [params, o_reward]
 % s=size(pareto_data);
@@ -83,10 +80,10 @@ createfigure(o_reward ,params, S, epoch, length(o_reward), figure1, 'Params(M)',
 
 % scatter
 figure2 = figure('WindowState','maximized');
-createfigure(o_reward,flops , S, epoch, length(o_reward), figure2, 'Flops(G)', [0,0.8], [0,17],pareto_flops)
+createfigure(o_reward,flops , S, epoch, length(o_reward), figure2, 'Flops', [0,0.8], [0,15],pareto_flops)
 % scatter
 figure3 = figure('WindowState','maximized');
-createfigure(o_reward, delay , S, epoch, length(o_reward), figure3, 'Delay(s)', [0,0.8], [0,3],pareto_delay)
+createfigure(o_reward, delay , S, epoch, length(o_reward), figure3, 'Delay', [0,0.8], [0,3],pareto_delay)
 
 
 figure4 = figure('WindowState','maximized');
