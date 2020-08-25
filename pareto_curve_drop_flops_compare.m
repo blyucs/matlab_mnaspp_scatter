@@ -66,7 +66,7 @@ xlabel('Accuracy(Original evaluation of the architectures)','FontSize',20);
 ylabel('Flops(G)','FontSize',20);
 
 % % 取消以下行的注释以保留坐标区的 X 范围
-xlim(axes1,[0.3,0.8])
+xlim(axes1,[0.3,0.7])
 % 取消以下行的注释以保留坐标区的 Y 范
 %     ylim(axes1,[0.2 1.2]);
 ylim(axes1,[0.15,0.5])

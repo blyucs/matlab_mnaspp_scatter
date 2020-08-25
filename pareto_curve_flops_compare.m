@@ -63,13 +63,13 @@ figure1 = figure('WindowState','maximized');
 axes1 = axes('Parent',figure1);
 hold(axes1,'on');
 
-plot(o_reward_6(pareto_6),params_6(pareto_6),'linestyle','-', 'color', 'r', 'linewidth',3)
-plot(o_reward_3(pareto_3),params_3(pareto_3),'linestyle','--', 'color', 'g', 'linewidth',3)
-plot(o_reward_b(pareto_b),params_b(pareto_b),'linestyle',':', 'color', 'b', 'linewidth',3)
+plot(o_reward_6(pareto_6),flops_6(pareto_6),'linestyle','-', 'color', 'r', 'linewidth',3)
+plot(o_reward_3(pareto_3),flops_3(pareto_3),'linestyle','--', 'color', 'g', 'linewidth',3)
+plot(o_reward_b(pareto_b),flops_b(pareto_b),'linestyle',':', 'color', 'b', 'linewidth',3)
 
-scatter(o_reward_6(pareto_6),params_6(pareto_6),S,epoch_6(pareto_6),'^','MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0]);
-scatter(o_reward_3(pareto_3),params_3(pareto_3),S,epoch_3(pareto_3),'d','MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0]);
-scatter(o_reward_b(pareto_b),params_b(pareto_b),S,epoch_6(pareto_b),'MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0]);
+scatter(o_reward_6(pareto_6),flops_6(pareto_6),S,epoch_6(pareto_6),'^','MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0]);
+scatter(o_reward_3(pareto_3),flops_3(pareto_3),S,epoch_3(pareto_3),'d','MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0]);
+scatter(o_reward_b(pareto_b),flops_b(pareto_b),S,epoch_6(pareto_b),'MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0]);
 
 % 创建 ylabel
 xlabel('Accuracy(Original evaluation of the architectures)','FontSize',20);
@@ -81,7 +81,7 @@ ylabel('Flops(G)','FontSize',20);
 xlim(axes1,[0.1,0.8])
 % 取消以下行的注释以保留坐标区的 Y 范
 %     ylim(axes1,[0.2 1.2]);
-ylim(axes1,[0,1.2])
+ylim(axes1,[0,6])
 
 % lg = legend('Flops -0.6','Flops -0.3','Baseline')
 lg = legend( '    Flops -0.6','    Flops -0.3','    Baseline')
