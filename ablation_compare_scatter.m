@@ -36,10 +36,7 @@ set(legend0,...
     'Position',[0.179340281503068 0.80647955840029 0.244791660162931 0.0691268172060874]);
 
 
-
-
-
-figure1 = figure('WindowState','maximized');
+figure1 = figure('WindowState','maximized'); % no use
 % 创建 axes
 axes1 = axes('Parent',figure1);
 hold(axes1,'on');
@@ -81,8 +78,7 @@ set(gca,'xtick',1:1:30)
 % 创建 legend
 legend2 = legend(axes2,'show');
 set(legend2,...
-    'Position',[0.179340281503068 0.80647955840029 0.244791660162931 0.0691268172060874]);
-
+    'Position',[0.177256947502287 0.839743591664324 0.19999999483116 0.0691268172060874]);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 figure3 = figure('WindowState','maximized');
@@ -91,7 +87,7 @@ axes3 = axes('Parent',figure3);
 hold(axes3,'on');
 S= 200
 % 创建 scatter
-h3 = scatter(num,two_stage_with_kd,S,'DisplayName','Two-stages training with KD','MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0],'Marker','square');
+h3 = scatter(num,two_stage_without_kd,S,'DisplayName','Two-stages training without KD','MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0],'Marker','square');
 hold on
 g3 = scatter(num,one_stage_from_scratch,S,'DisplayName','One-stage training from scratch','MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0]);
 % 创建 ylabel
