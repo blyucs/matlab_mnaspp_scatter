@@ -24,16 +24,16 @@ S= 200
 % 创建 scatter
 h = scatter(o_reward,full_training_reward,S,'DisplayName','Architectures','MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0]);
 % 创建 ylabel
-xlabel('Original evaluation of the architectures');
+xlabel('Original evaluation of the architectures(Search stage)', 'FontSize',30);
 set(gca,'xtick',0.2:0.05:0.7)
 % 创建 xlabel
-ylabel('Full training accuracy');
+ylabel('Full training accuracy', 'FontSize',30);
 grid(axes0,'on');
-set(axes0,'GridAlpha',0.35,'FontSize',20);
+set(axes0,'GridAlpha',0.35,'FontSize',30);
 % 创建 legend
 legend0 = legend(axes0,'show');
 set(legend0,...
-    'Position',[0.179340281503068 0.80647955840029 0.244791660162931 0.0691268172060874]);
+    'Position',[0.146006946555442 0.838444215101622 0.136458330058182 0.0509355495414714]);
 
 
 figure1 = figure('WindowState','maximized'); % no use
@@ -44,14 +44,14 @@ S= 200
 % 创建 scatter
 h = scatter(num,o_reward,S,'DisplayName','Direct training from scratch','MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0],'Marker','square');
 hold on
-g = scatter(num,full_training_reward,S,'DisplayName','Two-stages training with pre-computing','MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0]);
+g = scatter(num,full_training_reward,S,'DisplayName','Two-stage training with pre-computing','MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0]);
 % 创建 ylabel
 xlabel('Original evaluation of the architectures');
 
 % 创建 xlabel
 ylabel('Full training accuracy');
 grid(axes1,'on');
-set(axes1,'FontSize',20);
+set(axes1,'FontSize',30);
 % 创建 legend
 legend1 = legend(axes1,'show');
 set(legend1,...
@@ -63,22 +63,25 @@ figure2 = figure('WindowState','maximized');
 axes2 = axes('Parent',figure2);
 hold(axes2,'on');
 S= 200
+plot(num,two_stage_with_kd,'linestyle','-', 'color', 'r', 'linewidth',3)
+plot(num,two_stage_without_kd,'linestyle','--', 'color', 'b', 'linewidth',3)
 % 创建 scatter
-h2 = scatter(num,two_stage_with_kd,S,'DisplayName','Two-stages training with KD','MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0],'Marker','square');
-hold on
-g2 = scatter(num,two_stage_without_kd,S,'DisplayName','Two-stages training without KD','MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0]);
+h2 = scatter(num,two_stage_with_kd,S,'MarkerFaceColor','flat','MarkerEdgeColor',[1 0 0],'Marker','square');
+% hold on
+g2 = scatter(num,two_stage_without_kd,S,'MarkerFaceColor','flat','MarkerEdgeColor',[0 0 1]);
+
 % 创建 ylabel
 xlabel('Architectures');
 % 创建 xlabel
 ylabel('Accuracy(Reward)');
 
 grid(axes2,'on');
-set(axes2,'GridAlpha',0.35,'FontSize',20);
+set(axes2,'GridAlpha',0.35,'FontSize',30);
 set(gca,'xtick',1:1:30)
 % 创建 legend
-legend2 = legend(axes2,'show');
+legend2 = legend('    Two-stage training with KD','    Two-stage training without KD'); 
 set(legend2,...
-    'Position',[0.177256947502287 0.839743591664324 0.19999999483116 0.0691268172060874]);
+    'Position',[0.179340281503068 0.80647955840029 0.244791660162931 0.0691268172060874]);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 figure3 = figure('WindowState','maximized');
@@ -86,20 +89,22 @@ figure3 = figure('WindowState','maximized');
 axes3 = axes('Parent',figure3);
 hold(axes3,'on');
 S= 200
+plot(num,two_stage_without_kd,'linestyle','-', 'color', 'r', 'linewidth',3)
+plot(num,one_stage_from_scratch,'linestyle','--', 'color', 'b', 'linewidth',3)
 % 创建 scatter
-h3 = scatter(num,two_stage_without_kd,S,'DisplayName','Two-stages training without KD','MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0],'Marker','square');
+h3 = scatter(num,two_stage_without_kd,S,'MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0],'Marker','square');
 hold on
-g3 = scatter(num,one_stage_from_scratch,S,'DisplayName','One-stage training from scratch','MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0]);
+g3 = scatter(num,one_stage_from_scratch,S,'MarkerFaceColor','flat','MarkerEdgeColor',[0 0 0]);
 % 创建 ylabel
 xlabel('Architectures');
 % 创建 xlabel
 ylabel('Accuracy(Reward)');
 ylim(axes3,[0,0.7])
 grid(axes3,'on');
-set(axes3,'GridAlpha',0.35,'FontSize',20);
+set(axes3,'GridAlpha',0.35,'FontSize',30);
 set(gca,'xtick',1:1:30)
 % 创建 legend
-legend3 = legend(axes3,'show');
+legend3 = legend('    Two-stage training without KD','    One-stage training from scratch'); 
 set(legend3,...
     'Position',[0.179340281503068 0.80647955840029 0.244791660162931 0.0691268172060874]);
 

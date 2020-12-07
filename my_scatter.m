@@ -17,13 +17,13 @@ pareto_delay = []
 % pareto_para = [866,703,456,56]
 % 456  -- 0.28  -- f1-score  94.7
 
-%82 flops =-0.6
+%82 flops =-0.6 without drop
 % pkt_dir = 'Y:\lvbo_dir\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200803T2355\'
 % pareto_flops = [416,551,599,579,928,46]
 
 %19 flops add drop =-0.6
-pkt_dir = 'X:\00_lvbo_dir\01_code\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200804T2242\'
-pareto_flops = [908,778,976,829,950,810,762,805,653]
+% pkt_dir = 'X:\00_lvbo_dir\01_code\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200804T2242\'
+% pareto_flops = [908,778,976,829,950,810,762,805,653]
 % 653 flops:1.48G   
 % 805 flops: 1.18G 
 
@@ -74,7 +74,7 @@ mo_params_coe = data(1:data_num,7)
 mo_delay_coe = data(1:data_num,8)
 mo_flops_coe = data(1:data_num,9)
 
-S = 100; %坐标点的大小/尺寸
+S = 150; %坐标点的大小/尺寸
 % 创建 figure
 
 % scatte
@@ -101,10 +101,10 @@ createfigure(o_reward ,params, S, epoch, length(o_reward), figure1, 'Params(M)',
 
 % scatter
 figure2 = figure('WindowState','maximized');
-createfigure(o_reward,flops , S, epoch, length(o_reward), figure2, 'Flops(G)', [0,0.8], [0,17],pareto_flops)
+createfigure(o_reward,flops , S, epoch, length(o_reward), figure2, 'FLOPs(G)', [0,0.75], [0,17],pareto_flops)
 % scatter
 figure3 = figure('WindowState','maximized');
-createfigure(o_reward, delay , S, epoch, length(o_reward), figure3, 'Delay(s)', [0,0.8], [0,3],pareto_delay)
+createfigure(o_reward, delay , S, epoch, length(o_reward), figure3, 'Inference latency(s)', [0,0.75], [0,3],pareto_delay)
 
 
 figure4 = figure('WindowState','maximized');
