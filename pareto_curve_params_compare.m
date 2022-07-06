@@ -9,11 +9,11 @@ pareto_delay = []
 pkt_dir = []
 
 % 82 para-0.6
-pkt_dir_6 = 'Y:\lvbo_dir\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200731T1522\'
+pkt_dir_6 = 'D:\00_code\Multi-objective-NAS-for-efficient-PP\src\ckpt\ckpt\_search_celebA_search_20200731T1522\'
 pareto_para_6 = [802,789,989,883,737,981,860,972,626,950,196]
 
 % 19 para-0.3
-pkt_dir_3 = 'X:\00_lvbo_dir\01_code\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200731T1550\'
+pkt_dir_3 = 'D:\00_code\Multi-objective-NAS-for-efficient-PP\19_ckpt\ckpt\ckpt\_search_celebA_search_20200731T1550\'
 pareto_para_3 = [866,703,456,56]
 
 %82 flops =-0.6
@@ -41,7 +41,7 @@ pareto_para_3 = [866,703,456,56]
 
 
 % 19 baseline
-pkt_dir_b = 'X:\00_lvbo_dir\01_code\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200806T0717\'
+pkt_dir_b = 'D:\00_code\Multi-objective-NAS-for-efficient-PP\19_ckpt\ckpt\ckpt\_search_celebA_search_20200806T0717\'
 pareto_para_b = [118,342,326,399,250,162,457,461,641,585,173]
 
 data = []

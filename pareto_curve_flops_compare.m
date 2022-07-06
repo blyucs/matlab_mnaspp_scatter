@@ -10,16 +10,16 @@ pkt_dir = []
 
 
 %19 flops add drop =-0.6
-pkt_dir_6 = 'X:\00_lvbo_dir\01_code\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200804T2242\'
+pkt_dir_6 = 'D:\00_code\Multi-objective-NAS-for-efficient-PP\19_ckpt\ckpt\ckpt\_search_celebA_search_20200804T2242\'
 pareto_6 = [908,778,976,829,950,810,762,805,653]
 
 %82 flops add drop =-0.3  (terninate by me , and continue to train from 549)
-pkt_dir_3 =  'Y:\lvbo_dir\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200805T1327\'
+pkt_dir_3 =  'D:\00_code\Multi-objective-NAS-for-efficient-PP\src\ckpt\ckpt\_search_celebA_search_20200805T1327\'
 pareto_3 = [820,685,895,775,938,625]
 % pkt_dir =  'Y:\lvbo_dir\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200806T0718\'
 
 % 19 baseline
-pkt_dir_b = 'X:\00_lvbo_dir\01_code\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200806T0717\'
+pkt_dir_b = 'D:\00_code\Multi-objective-NAS-for-efficient-PP\19_ckpt\ckpt\ckpt\_search_celebA_search_20200806T0717\'
 pareto_b = [50,192,326,106,60,150,457,461,173]
 
 data = []

@@ -9,11 +9,11 @@ pareto_delay = []
 pkt_dir = []
 
 %82 flops =-0.6
-pkt_dir_n = 'Y:\lvbo_dir\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200803T2355\'
+pkt_dir_n = 'D:\00_code\Multi-objective-NAS-for-efficient-PP\src\ckpt\ckpt\_search_celebA_search_20200803T2355\'
 pareto_n = [416,551,599,579,928,46]
 
 %19 flops add drop =-0.6
-pkt_dir_6 = 'X:\00_lvbo_dir\01_code\Multi-objective-NAS-for-efficient-PP\src\ckpt\_search_celebA_search_20200804T2242\'
+pkt_dir_6 = 'D:\00_code\Multi-objective-NAS-for-efficient-PP\19_ckpt\ckpt\ckpt\_search_celebA_search_20200804T2242\'
 pareto_6 = [908,778,976,829,950,810,762,805,653]
 
 data = []
